@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker run -d --restart=always -p 8375:2375 -p 3376:3375 -e SWARM_MESOS_ROLE=swarm --name swarm-ezra ezra-build-van -debug manage -c mesos-experimental --cluster-opt mesos.address=0.0.0.0 --cluster-opt mesos.port=3376 --cluster-opt mesos.user=root --cluster-opt mesos.role=swarm --cluster-opt mesos.tasktimeout=10m --cluster-opt mesos.offer_refuse_seconds=0.1 --cluster-opt mesos.offertimeout=1m --host 0.0.0.0:2375 10.140.171.52:5050docker run -d --restart=always -p 8375:2375 -p 3376:3375 -e SWARM_MESOS_ROLE=swarm --name swarm-ezra ezra-build-van -debug manage -c mesos-experimental --cluster-opt mesos.address=0.0.0.0 --cluster-opt mesos.port=3376 --cluster-opt mesos.user=root --cluster-opt mesos.role=swarm --cluster-opt mesos.tasktimeout=10m --cluster-opt mesos.offer_refuse_seconds=0.1 --cluster-opt mesos.offertimeout=1m --host 0.0.0.0:2375 1.2.3.4:5050
+
